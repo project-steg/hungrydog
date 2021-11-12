@@ -9,55 +9,68 @@
         <ul>
           <li @click="toggleMenu()">
             <nuxt-link v-scroll-to="toNews" to="/">
-              ニュース
+              ABOUT
             </nuxt-link>
           </li>
           <li @click="toggleMenu()">
             <nuxt-link v-scroll-to="toAbout" to="/">
-              私たちについて
+              SERVICE
             </nuxt-link>
           </li>
           <li @click="toggleMenu()">
             <nuxt-link v-scroll-to="toWorks" to="/">
-              活動内容
+              INFLUENCER
             </nuxt-link>
           </li>
           <li @click="toggleMenu()">
             <nuxt-link v-scroll-to="toProfile" to="/">
-              法人概要
+              VISION
             </nuxt-link>
           </li>
           <li @click="toggleMenu()">
             <nuxt-link v-scroll-to="toMembers" to="/">
-              メンバー
+              NEWS
             </nuxt-link>
           </li>
           <li @click="toggleMenu()">
             <nuxt-link v-scroll-to="toContact" to="/">
-              お問い合わせ
+              COMPANY
+            </nuxt-link>
+          </li>
+          <li @click="toggleMenu()">
+            <nuxt-link v-scroll-to="toContact" to="/">
+              CONTACT
             </nuxt-link>
           </li>
         </ul>
+        <div class="times-wrapper">
+          <span>Oct. 20</span>
+          <div class="day-of-week">
+            Wed
+          </div>
+        </div>
       </div>
     </nav>
     <div class="circle-bg" :class="{circleactive: circleactive}" />
   </div>
 </template>
 
-<script>
-export default {
+<script lang="ts">
+import Vue from 'vue'
+
+export default Vue.extend({
   data () {
     return {
-      active: false,
-      panelactive: false,
-      circleactive: false,
-      toTop: '#main-visual',
-      toNews: '#news-container',
-      toAbout: '#about',
-      toWorks: '#works-container',
-      toProfile: '#company-profile',
-      toMembers: '#members',
-      toContact: '#contact'
+      active: false as Boolean,
+      panelactive: false as Boolean,
+      circleactive: false as Boolean,
+      toTop: '#main-visual' as String,
+      toNews: '#news-container' as String,
+      toAbout: '#about' as String,
+      toWorks: '#works-container' as String,
+      toProfile: '#company-profile' as String,
+      toMembers: '#members' as String,
+      toContact: '#contact' as String
     }
   },
   methods: {
@@ -73,7 +86,7 @@ export default {
       }
     }
   }
-}
+})
 </script>
 
 <style scoped lang="scss">
@@ -114,36 +127,36 @@ export default {
 #g-nav-list{
   display: none;/*はじめは表示なし*/
   /*ナビの数が増えた場合縦スクロール*/
-  position: fixed;
-  z-index: 999;
   width: 100%;
-  height: 100vh;
-  overflow: auto;
+  justify-content: space-between;
   -webkit-overflow-scrolling: touch;
+  position: fixed;
+  padding: 100px 60px;
+  box-sizing: border-box;
+  top: 0;
+  bottom: 0;
+  overflow-y: auto;
+  z-index: 999;
 }
 
 #g-nav.panelactive #g-nav-list{
-  display: block; /*クラスが付与されたら出現*/
+  display: inline-flex; /*クラスが付与されたら出現*/
 }
 
 /*ナビゲーション*/
-#g-nav ul {
+#g-nav {
   opacity: 0;/*はじめは透過0*/
   /*ナビゲーション天地中央揃え※レイアウトによって調整してください。不必要なら削除*/
-  position: absolute;
   z-index: 999;
-  top:50%;
-  left:50%;
-  transform: translate(-50%,-50%);
 }
 
 /*背景が出現後にナビゲーションを表示*/
-#g-nav.panelactive ul {
+#g-nav.panelactive {
   opacity:1;
 }
 
 /* 背景が出現後にナビゲーション li を表示※レイアウトによって調整してください。不必要なら削除*/
-#g-nav.panelactive ul li{
+#g-nav.panelactive{
   animation-name:gnaviAnime;
   animation-duration:1s;
   animation-delay:.2s;/*0.2 秒遅らせて出現*/
@@ -161,19 +174,43 @@ export default {
 
 /*リストのレイアウト設定*/
 #g-nav li{
-  text-align: center;
   list-style: none;
 }
 
 #g-nav li a{
-  color: #333;
+  color: $black-100;
   text-decoration: none;
-  padding:10px;
-  display: block;
-  text-transform: uppercase;
-  letter-spacing: 0.1em;
-  font-weight: bold;
+  font-weight: 700;
+  line-height: 110px;
+  font-size: 7rem;
 }
+
+.times-wrapper {
+  height: calc(110px * 7);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: flex-end;
+  span {
+    font-size: 7rem;
+    font-weight: 700;
+  }
+}
+
+.day-of-week {
+  width: 414px;
+  height: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  font-size: 7rem;
+  font-weight: 700;
+  color: $white;
+  background-color: $black-100;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+
 
 /*========= ボタンのためのCSS ===============*/
 .openbtn{

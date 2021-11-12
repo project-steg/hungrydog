@@ -20,8 +20,6 @@ export default Vue.extend({
 <style scoped lang="scss">
 .index {
   width: 100%;
-  height: 100vh;
   background-color: #f7f7f7;
-  overflow: hidden;
 }
 </style>
