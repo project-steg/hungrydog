@@ -1,2 +1,28 @@
 $black-100: #17171b;
 $white: #ffffff;
+$breakpoints: (
+  'sm': 'screen and (max-width: 400px)',
+  'md': 'screen and (max-width: 768px)',
+  'lg': 'screen and (max-width: 1000px)',
+  'xl': 'screen and (max-width: 1200px)',
+) !default;
+@mixin mq($breakpoint: md) {
+  @media #{map-get($breakpoints, $breakpoint)} {
+    @content;
+  }
+}
+html,
+div,
+p,
+a,
+span,
+h2,
+h3,
+label {
+  font-family: 'Noto Sans JP', sans-serif;
+  font-size: 16px;
+  color: #17171b;
+  @include mq(lg) {
+    font-size: 14px;
+  }
+}

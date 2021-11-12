@@ -14,45 +14,51 @@
       <div class="clock">
         JPN {{ nowTime }}
       </div>
-      <div class="hamburger" @click="toggle()">
-        <div class="meat top" />
-        <div class="meat bottom" />
-        <div class="meat" />
+      <div class="header-hamburger">
+        <Hamburger />
       </div>
     </div>
-    <transition name="fade">
-      <div v-if="isOpen" class="container">
-        hogehoge
-      </div>
-    </transition>
-
-    <transition name="scale">
-      <div v-if="isOpen" class="circle-back" />
-    </transition>
   </div>
 </template>
 
 <script lang="ts">
 import Vue from 'vue'
 import SvgIcon from '@/components/common/SvgIcon.vue'
+import Hamburger from '@/components/common/Hamburger.vue'
 
 export default Vue.extend({
   components: {
-    SvgIcon
+    SvgIcon,
+    Hamburger
   },
   data () {
     return {
-      isOpen: false as Boolean
+      isOpen: false as Boolean,
+      nowTime: '' as String,
+      degNum: 0 as Number,
+      opacityNum: 1 as Number,
+      heightNum: 20 as Number
     }
   },
-  computed: {
-    nowTime () {
-      return this.$dayjs().format('YYYY:MM:DD')
-    }
+  mounted () {
+    this.getTime()
   },
   methods: {
     toggle () {
       this.isOpen = !this.isOpen
+      // ハンバーガーアニメーション処理
+      if (this.isOpen) {
+        this.degNum = 45
+        this.opacityNum = 0
+      } else {
+        this.degNum = 0
+        this.opacityNum = 1
+      }
+    },
+    getTime () {
+      setInterval(() => {
+        this.nowTime = this.$dayjs().format('HH:mm:ss')
+      }, 1000)
     }
   }
 })
@@ -101,75 +107,7 @@ export default Vue.extend({
   margin-left: 1.9rem;
 }
 
-.hamburger {
-  width: 30px;
-  height: 20px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
+.header-hamburger {
   margin-left: 2.2rem;
-  cursor: pointer;
-  z-index: 100;
-}
-
-.meat {
-  width: 100%;
-  height: 3px;
-  border-radius: 1.5px;
-  background-color: $black-100;
-}
-
-.top {
-}
-
-.circle-back {
-  width: 300vh;
-  height: 300vh;
-  top: calc(-150vh + 35px);
-  right: calc(-150vh + 2.5rem);
-  border-radius: 50%;
-  position: absolute;
-  background-color: $white;
-  z-index: 10;
-}
-
-.scale-enter-active {
-  animation: change-scale .5s;
-}
-
-.scale-leave-active {
-  animation: change-scale .5s reverse;
-}
-
-@keyframes change-scale {
-  0% {
-    transform: scale(0);
-  }
-  100% {
-    transform: scale(1);
-  }
-}
-
-.container {
-  width: 100%;
-  height: 100vh;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 11;
-  font-size: 2rem;
-  font-weight: 700;
-}
-
-.fade-enter-active, .fade-leave-active {
-  transition: opacity .5s;
-}
-
-.fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
-  opacity: 0;
 }
 </style>

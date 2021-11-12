@@ -47,7 +47,8 @@ export default {
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
     '@nuxtjs/style-resources',
-    '@nuxtjs/dayjs'
+    '@nuxtjs/dayjs',
+    'vue-scrollto/nuxt'
   ],
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
