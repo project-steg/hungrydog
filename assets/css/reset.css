@@ -1,0 +1,39 @@
+/*** The new CSS Reset - version 1.0.0 (last updated 8.7.2021) ***/
+@import url("https://fonts.googleapis.com/css2?family=Roboto | Noto+Sans+JP:wght@400;500;700&display=swap");
+/* Remove all the styles of the "User-Agent-Stylesheet", except for the 'display' property */
+*:where(:not(iframe, canvas, img, svg, video):not(svg *)) {
+  all: unset;
+  display: revert;
+}
+
+/* Preferred box-sizing value */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove list styles (bullets/numbers) */
+ol,
+ul {
+  list-style: none;
+}
+
+/* For images to not be able to exceed their container */
+img {
+  max-width: 100%;
+}
+
+/* removes spacing between cells in tables */
+table {
+  border-collapse: collapse;
+}
+
+div,
+p,
+a,
+span {
+  font-family: "Roboto", "Noto Sans JP";
+  font-size: 16px;
+  text-decoration: none;
+}
