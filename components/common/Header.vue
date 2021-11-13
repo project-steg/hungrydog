@@ -64,14 +64,18 @@ export default Vue.extend({
   padding: 0 2.5rem;
   box-sizing: border-box;
   position: fixed;
-  @include mq(xl) {
-    padding: 0 1.5rem;
+  @include mq(md) {
+    padding: 0 1rem;
+    height: 50px;
   }
 }
 
 .logo {
   font-size: 1.5rem;
   font-weight: 700;
+  @include mq(md) {
+    font-size: 1.2rem;
+  }
 }
 
 .header-r {
@@ -86,9 +90,18 @@ export default Vue.extend({
   font-size: 1.2rem;
   font-weight: 700;
   margin-left: 1.9rem;
+  @include mq(xl) {
+    margin-left: 0;
+  }
+  @include mq(md) {
+    font-size: 1rem;
+  }
 }
 
 .header-hamburger {
   margin-left: 2.2rem;
+  @include mq(xl) {
+    margin-left: 1rem;
+  }
 }
 </style>

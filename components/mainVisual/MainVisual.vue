@@ -18,7 +18,11 @@
       <h1>Hungry Dog Inc.</h1>
       <span>is indomitable spirit team.<br>
         We will do our best<br>
-        to be your greatest partner.</span>
+        to be your greatest partner.
+        <div class="num-s">
+          01
+        </div>
+      </span>
     </div>
   </div>
 </template>
@@ -44,6 +48,9 @@ export default Vue.extend({
   background-size: cover;
   background-position: top center;
   object-fit: cover;
+  @include mq(xl) {
+    justify-content: flex-end;
+  }
 }
 
 .header-in-main-visual {
@@ -53,6 +60,10 @@ export default Vue.extend({
   align-items: center;
   justify-content: flex-end;
   padding-right: 250px;
+  @include mq(xl) {
+    justify-content: flex-start;
+    padding: 0 0 0 0.6rem;
+  }
 }
 
 .circle-bg {
@@ -63,6 +74,9 @@ export default Vue.extend({
   justify-content: center;
   border-radius: 26px;
   background-color: rgba($white, 40%);
+  @include mq(xl) {
+    background-color: rgba($white, 0%);
+  }
   span {
     font-weight: 700;
     margin-left: 1rem;
@@ -86,20 +100,43 @@ export default Vue.extend({
 .contents {
   max-width: 1000px;
   width: 90%;
-  margin: 2.5rem;
+  margin: 0 0 2.5rem 2.5rem;
+  // position: relative;
   .num {
     font-size: 3rem;
     font-weight: 700;
     text-decoration: underline;
     text-underline-offset: 10px;
+    @include mq(xl) {
+      display: none;
+    }
+  }
+
+  .num-s {
+    font-size: 1.2rem;
+    font-weight: 700;
+    text-decoration: underline;
+    text-underline-offset: 4px;
+    margin-left: 1.8rem;
+    @include mq(xl) {
+      display: block;
+    }
   }
   h1 {
     font-size: 8rem;
     font-weight: 700;
+    @include mq(xl) {
+      font-size: 2.5rem;
+    }
   }
   span {
     font-size: 4rem;
     font-weight: 700;
+    @include mq(xl) {
+      font-size: 1.2rem;
+      display: flex;
+      align-items: flex-end;
+    }
   }
 }
 </style>
