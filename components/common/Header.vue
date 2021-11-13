@@ -4,13 +4,6 @@
       Hungry Dog
     </div>
     <div class="header-r">
-      <!-- <span>follow us</span>
-      <div class="sns-icons">
-        <SvgIcon type="Instagram" />
-      </div>
-      <div class="sns-icons">
-        <SvgIcon type="Twitter" />
-      </div> -->
       <div class="clock">
         JPN {{ nowTime }}
       </div>
@@ -23,12 +16,10 @@
 
 <script lang="ts">
 import Vue from 'vue'
-import SvgIcon from '@/components/common/SvgIcon.vue'
 import Hamburger from '@/components/common/Hamburger.vue'
 
 export default Vue.extend({
   components: {
-    SvgIcon,
     Hamburger
   },
   data () {
@@ -72,6 +63,7 @@ export default Vue.extend({
   align-items: center;
   padding: 0 2.5rem;
   box-sizing: border-box;
+  position: fixed;
   @include mq(xl) {
     padding: 0 1.5rem;
   }
@@ -87,20 +79,6 @@ export default Vue.extend({
   align-items: center;
   span {
     font-weight: 700;
-  }
-}
-
-.sns-icons {
-  width: 40px;
-  height: 40px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 50%;
-  background-color: $black-100;
-  margin-left: 1rem;
-  .svg-icon {
-    fill: $white;
   }
 }
 
