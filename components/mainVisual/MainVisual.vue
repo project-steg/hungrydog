@@ -45,11 +45,17 @@ export default Vue.extend({
   flex-direction: column;
   justify-content: space-between;
   background-image: url('@/assets/img/bg-image.jpg');
+  background-repeat: no-repeat;
   background-size: cover;
   background-position: top center;
   object-fit: cover;
   @include mq(xl) {
     justify-content: flex-end;
+    background-position: 100% 0;
+  }
+  @include mq(md) {
+    justify-content: flex-end;
+    background-position: 80% 0;
   }
 }
 
@@ -64,6 +70,11 @@ export default Vue.extend({
     justify-content: flex-start;
     padding: 0 0 0 0.6rem;
   }
+  @include mq(md) {
+    height: 70px;
+    justify-content: flex-start;
+    padding: 0;
+  }
 }
 
 .circle-bg {
@@ -76,6 +87,9 @@ export default Vue.extend({
   background-color: rgba($white, 40%);
   @include mq(xl) {
     background-color: rgba($white, 0%);
+  }
+  @include mq(md) {
+    width: 200px;
   }
   span {
     font-weight: 700;
@@ -98,10 +112,11 @@ export default Vue.extend({
 }
 
 .contents {
-  max-width: 1000px;
-  width: 90%;
+  display: inline-block;
   margin: 0 0 2.5rem 2.5rem;
-  // position: relative;
+  @include mq(md) {
+    margin: 0 0 1.25rem 1.25rem;
+  }
   .num {
     font-size: 3rem;
     font-weight: 700;
@@ -113,6 +128,7 @@ export default Vue.extend({
   }
 
   .num-s {
+    display: none;
     font-size: 1.2rem;
     font-weight: 700;
     text-decoration: underline;
