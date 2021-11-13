@@ -137,6 +137,10 @@ export default Vue.extend({
   bottom: 0;
   overflow-y: auto;
   z-index: 999;
+  @include mq(xl) {
+    flex-direction: column;
+    padding: 30px 30px;
+  }
 }
 
 #g-nav.panelactive #g-nav-list{
@@ -183,6 +187,10 @@ export default Vue.extend({
   font-weight: 700;
   line-height: 110px;
   font-size: 7rem;
+  @include mq(xl) {
+    font-size: 3rem;
+    line-height: 80px;
+  }
 }
 
 .times-wrapper {
@@ -194,6 +202,10 @@ export default Vue.extend({
   span {
     font-size: 7rem;
     font-weight: 700;
+      @include mq(xl) {
+      font-size: 3rem;
+      line-height: 80px;
+    }
   }
 }
 
@@ -209,8 +221,13 @@ export default Vue.extend({
   background-color: $black-100;
   padding: 0 20px;
   box-sizing: border-box;
+  @include mq(xl) {
+    width: 155px;
+    height: 80px;
+    font-size: 3rem;
+    line-height: 80px;
+  }
 }
-
 
 /*========= ボタンのためのCSS ===============*/
 .openbtn{

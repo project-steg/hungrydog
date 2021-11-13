@@ -4,13 +4,13 @@
       Hungry Dog
     </div>
     <div class="header-r">
-      <span>follow us</span>
+      <!-- <span>follow us</span>
       <div class="sns-icons">
         <SvgIcon type="Instagram" />
       </div>
       <div class="sns-icons">
         <SvgIcon type="Twitter" />
-      </div>
+      </div> -->
       <div class="clock">
         JPN {{ nowTime }}
       </div>
@@ -72,6 +72,9 @@ export default Vue.extend({
   align-items: center;
   padding: 0 2.5rem;
   box-sizing: border-box;
+  @include mq(xl) {
+    padding: 0 1.5rem;
+  }
 }
 
 .logo {
