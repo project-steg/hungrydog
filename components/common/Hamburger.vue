@@ -131,7 +131,7 @@ export default Vue.extend({
   justify-content: space-between;
   -webkit-overflow-scrolling: touch;
   position: fixed;
-  padding: 100px 60px;
+  padding: 60px;
   box-sizing: border-box;
   top: 0;
   bottom: 0;
@@ -139,7 +139,7 @@ export default Vue.extend({
   z-index: 999;
   @include mq(xl) {
     flex-direction: column;
-    padding: 30px 30px;
+    padding: 30px;
   }
 }
 

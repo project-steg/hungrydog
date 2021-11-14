@@ -24,16 +24,21 @@
         </div>
       </span>
     </div>
+    <div class="scroll-bar-position">
+      <ScrollBar />
+    </div>
   </div>
 </template>
 
 <script lang="ts">
 import Vue from 'vue'
 import SvgIcon from '@/components/common/SvgIcon.vue'
+import ScrollBar from '@/components/mainVisual/ScrollBar.vue'
 
 export default Vue.extend({
   components: {
-    SvgIcon
+    SvgIcon,
+    ScrollBar
   }
 })
 </script>
@@ -153,6 +158,16 @@ export default Vue.extend({
       display: flex;
       align-items: flex-end;
     }
+  }
+}
+
+.scroll-bar-position {
+  position: absolute;
+  bottom: 40px;
+  right: 40px;
+  @include mq(md) {
+    bottom: 200px;
+    right: 10px;
   }
 }
 </style>
