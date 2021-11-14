@@ -1,5 +1,8 @@
 <template>
   <div class="service">
+    <div class="number">
+      02
+    </div>
     <div class="title">
       SERVICE
     </div>
@@ -29,6 +32,26 @@ export default Vue.extend({
   display: flex;
   flex-direction: column;
   align-items: center;
+  position: relative;
+}
+
+.number {
+  font-size: 8rem;
+  font-weight: 700;
+  color: $black-700;
+  border-bottom: 4px solid $black-700;
+  position: absolute;
+  top: 80px;
+  right: 80px;
+  z-index: 1;
+  @include mq(lg) {
+    top: 50px;
+  }
+  @include mq(md) {
+    top: 50px;
+    right: 20px;
+    font-size: 6rem;
+  }
 }
 
 .title {
@@ -36,6 +59,11 @@ export default Vue.extend({
   font-weight: 700;
   position: relative;
   margin-top: 80px;
+  z-index: 2;
+  @include mq(md) {
+    font-size: 1.6rem;
+    letter-spacing: 0.1rem;
+  }
   &:after {
     content: '';
     position: absolute;
@@ -54,6 +82,7 @@ export default Vue.extend({
 .text {
   margin-top: 40px;
   font-weight: 500;
+  z-index: 2;
 }
 
 .top-container {
