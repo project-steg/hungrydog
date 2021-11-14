@@ -64,6 +64,7 @@ export default Vue.extend({
   padding: 0 2.5rem;
   box-sizing: border-box;
   position: fixed;
+  z-index: 100;
   @include mq(md) {
     padding: 0 1rem;
     height: 50px;
@@ -100,6 +101,7 @@ export default Vue.extend({
 
 .header-hamburger {
   margin-left: 2.2rem;
+  z-index: 100;
   @include mq(xl) {
     margin-left: 1rem;
   }
