@@ -96,4 +96,14 @@ export default Vue.extend({
   justify-content: center;
   margin-top: 60px;
 }
+
+.detail-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  background-image: url('@/assets/img/service-bg.jpg');
+  background-repeat: no-repeat;
+  margin-top: 60px;
+  padding: 60px 0;
+}
 </style>
