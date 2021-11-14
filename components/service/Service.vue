@@ -12,16 +12,21 @@
     <div class="top-container">
       <TopContents />
     </div>
+    <div class="detail-container">
+      <DetailContents />
+    </div>
   </div>
 </template>
 
 <script lang="ts">
 import Vue from 'vue'
 import TopContents from '@/components/service/TopContents.vue'
+import DetailContents from '@/components/service/DetailContents.vue'
 
 export default Vue.extend({
   components: {
-    TopContents
+    TopContents,
+    DetailContents
   }
 })
 </script>

@@ -1,5 +1,7 @@
 <template>
-  <div class="detail-contents"></div>
+  <div class="detail-contents">
+    あ
+  </div>
 </template>
 
 <script lang="ts">
