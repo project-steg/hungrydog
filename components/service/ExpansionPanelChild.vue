@@ -4,12 +4,12 @@
       <slot name="title" />
       <div class="arrow" :style="{transform: `rotate(${rotateNum}deg)`}" />
     </div>
-    <div class="underline" />
     <transition name="slide-in">
       <div v-if="isOpened" class="contents">
         <slot name="contents" />
       </div>
     </transition>
+    <div class="underline" />
   </div>
 </template>
 
@@ -37,17 +37,11 @@ export default Vue.extend({
 
 <style scoped lang="scss">
 .expansion-panel-child {
-  width: calc(100% + 60px);
+  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 0 30px 0 90px;
-  position: relative;
   left: -30px;
-  cursor: pointer;
-  &:hover {
-    background-color: rgba($black-700, 90%);
-  }
 }
 
 .title {
@@ -58,7 +52,11 @@ export default Vue.extend({
   align-items: center;
   font-size: 1.2rem;
   font-weight: 700;
-  margin: 0 auto;
+  padding: 0 30px 0 60px;
+  cursor: pointer;
+  &:hover {
+    background-color: rgba($black-700, 90%);
+  }
 }
 
 .arrow {
@@ -72,7 +70,7 @@ export default Vue.extend({
 .underline {
   background:linear-gradient(to right, rgba(0,0,0,1), rgba(0,0,0,1) 55%, rgba(0, 0, 0, 0) 55%, rgba(0, 0, 0, 0) 100%) 0% 0%;
   background-size:9px 1px;
-  width: 100%;
+  width: calc(100% - 60px);
   height: 1px;
 }
 
@@ -86,6 +84,7 @@ export default Vue.extend({
 .contents {
   width: 100%;
   min-height: 80px;
-  padding: 0 30px;
+  padding: 0 46px 25px 76px;
+  font-weight: 500;
 }
 </style>

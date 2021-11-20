@@ -83,7 +83,8 @@ export default Vue.extend({
 .contents {
   width: 100%;
   min-height: 80px;
-  padding: 0 30px;
+  padding: 0 46px 25px;
+  font-weight: 500;
 }
 
 .underline2 {
