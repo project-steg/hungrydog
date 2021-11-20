@@ -2,7 +2,14 @@
   <div class="detail-contents">
     <expansion-panel>
       <template #title>
-        01&nbsp;&nbsp;インフルエンサーマーケティング事業
+        <div class="expansion-contents">
+          <div class="num">
+            01
+          </div>
+          <div class="text">
+            インフルエンサーマーケティング事業
+          </div>
+        </div>
       </template>
       <template #contents>
         弊社では独自のネットワークからInstagrammer, YouTuber, TikTokerといった幅広いインフルエンサーを抱えております。
@@ -34,7 +41,14 @@
     </expansion-panel-child>
     <expansion-panel>
       <template #title>
-        02&nbsp;&nbsp;広告代理 / アフィリエイト業
+        <div class="expansion-contents">
+          <div class="num">
+            02
+          </div>
+          <div class="text">
+            広告代理 / アフィリエイト業
+          </div>
+        </div>
       </template>
       <template #contents>
         弊社では、お客様のWEB広告運用周りのサポートをしております。
@@ -45,7 +59,14 @@
     </expansion-panel>
     <expansion-panel>
       <template #title>
-        03&nbsp;&nbsp;クリエイティブ事業
+        <div class="expansion-contents">
+          <div class="num">
+            03
+          </div>
+          <div class="text">
+            クリエイティブ事業
+          </div>
+        </div>
       </template>
       <template #contents>
         動画から写真撮影、LP作成などを弊社独自のネットワークで抱えているクリエイターが
@@ -57,7 +78,14 @@
     </expansion-panel>
     <expansion-panel>
       <template #title>
-        04&nbsp;&nbsp;ライバー代理店事業
+        <div class="expansion-contents">
+          <div class="num">
+            04
+          </div>
+          <div class="text">
+            ライバー代理店事業
+          </div>
+        </div>
       </template>
       <template #contents>
         弊社は将来的にライブコマース事業を促進するという強い目標を持っており、
@@ -67,7 +95,14 @@
     </expansion-panel>
     <expansion-panel>
       <template #title>
-        05&nbsp;&nbsp;ライブコマース事業
+        <div class="expansion-contents">
+          <div class="num">
+            05
+          </div>
+          <div class="text">
+            ライブコマース事業
+          </div>
+        </div>
       </template>
       <template #contents>
         Coming Soon...
@@ -75,7 +110,14 @@
     </expansion-panel>
     <expansion-panel>
       <template #title>
-        06&nbsp;&nbsp;メディア事業
+        <div class="expansion-contents">
+          <div class="num">
+            06
+          </div>
+          <div class="text">
+            メディア事業
+          </div>
+        </div>
       </template>
       <template #contents>
         Coming Soon...
@@ -83,7 +125,14 @@
     </expansion-panel>
     <expansion-panel>
       <template #title>
-        07&nbsp;&nbsp;ポスティング事業
+        <div class="expansion-contents">
+          <div class="num">
+            07
+          </div>
+          <div class="text">
+            ポスティング事業
+          </div>
+        </div>
       </template>
       <template #contents>
         Coming Soon...
@@ -91,7 +140,14 @@
     </expansion-panel>
     <expansion-panel>
       <template #title>
-        08&nbsp;&nbsp;SNSアカウント運営
+        <div class="expansion-contents">
+          <div class="num">
+            08
+          </div>
+          <div class="text">
+            SNSアカウント運営
+          </div>
+        </div>
       </template>
       <template #contents>
         ブランディングや認知度を高める上で重要なインスタグラムの運用代行を行います。弊社独自のインフルエンサーネットワークを活用しての運用施策や、業界最安値での物撮りなども魅力です。
@@ -125,5 +181,20 @@ export default Vue.extend({
   background-color: $white;
   transition-duration: .2s;
   transition: .5s;
+}
+
+.expansion-contents {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.num {
+  font-size: 1.2rem;
+  margin-right: 1rem;
+}
+
+.text {
+  font-size: 1.2rem;
 }
 </style>
