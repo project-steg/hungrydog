@@ -17,11 +17,12 @@ div,
 p,
 a,
 span,
+h1,
 h2,
 h3,
 label {
   font-size: 16px;
-  color: #17171b;
+  color: $black-100;
   @include mq(lg) {
     font-size: 14px;
   }

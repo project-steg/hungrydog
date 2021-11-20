@@ -33,7 +33,6 @@ export default Vue.extend({
 
 <style scoped lang="scss">
 .service {
-  height: 1000px;
   display: flex;
   flex-direction: column;
   align-items: center;
