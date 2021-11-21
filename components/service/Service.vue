@@ -33,10 +33,12 @@ export default Vue.extend({
 
 <style scoped lang="scss">
 .service {
+  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
   position: relative;
+  padding: 80px 0;
 }
 
 .number {
@@ -62,7 +64,6 @@ export default Vue.extend({
   font-size: 2rem;
   font-weight: 700;
   position: relative;
-  margin-top: 80px;
   z-index: 2;
   @include mq(md) {
     font-size: 1.6rem;

@@ -10,9 +10,24 @@
         HONOKA
       </div>
     </div>
-    <div class="name-wrapper" />
+    <div class="name-wrapper">
+      <div class="name">
+        ほのか
+      </div>
+      <div class="sns-icons">
+        <div class="sns-icon">
+          <SvgIcon type="Instagram" />
+        </div>
+        <div class="sns-icon">
+          <SvgIcon type="Twitter" />
+        </div>
+      </div>
+    </div>
     <div class="line" />
-    <div class="intro-text" />
+    <div class="intro-text">
+      ファッション系インフルエンサー。
+      双子の妹と共に弊社D2C事業部でアパレルブランドを2020年12月リリース。
+    </div>
   </div>
 </template>
 <script lang="ts">
@@ -27,13 +42,13 @@ export default Vue.extend({
 </script>
 <style scoped lang="scss">
 .influencer-item {
+  width: 300px;
   display: flex;
   flex-direction: column;
-  margin: 0 30px;
 }
 
 .img-wrapper {
-  width: 300px;
+  width: 100%;
   height: 375px;
   position: relative;
 }
@@ -74,5 +89,51 @@ img {
   position: absolute;
   bottom: 0;
   left: 0;
+}
+
+.name-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 0;
+}
+
+.name {
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+
+.sns-icons {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.sns-icon {
+  width: 30px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 15px;
+  background-color: $black-100;
+  margin-left: 0.5rem;
+  .svg-icon {
+    width: 1rem;
+    height: 1rem;
+    align-items: center;
+  }
+}
+
+.line {
+  background:linear-gradient(to right, rgba(0,0,0,1), rgba(0,0,0,1) 55%, rgba(0, 0, 0, 0) 55%, rgba(0, 0, 0, 0) 100%) 0% 0%;
+  background-size:9px 1px;
+  width: 100%;
+  height: 1px;
+}
+
+.intro-text {
+  padding-top: 1rem;
 }
 </style>

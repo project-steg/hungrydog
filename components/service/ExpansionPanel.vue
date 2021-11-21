@@ -86,12 +86,4 @@ export default Vue.extend({
   padding: 0 46px 25px;
   font-weight: 500;
 }
-
-.underline2 {
-  background:linear-gradient(to right, rgba(0,0,0,1), rgba(0,0,0,1) 55%, rgba(0, 0, 0, 0) 55%, rgba(0, 0, 0, 0) 100%) 0% 0%;
-  background-size:9px 1px;
-  width: calc(100% - 60px);
-  height: 1px;
-  margin-top: 30px;
-}
 </style>
