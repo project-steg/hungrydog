@@ -22,7 +22,7 @@
           </div>
           <div class="ceo-info">
             <span>Ryota Nagamatsu</span>
-            <div class="sns-icon">
+            <div class="vision-sns-icon">
               <SvgIcon type="Instagram" />
             </div>
           </div>
@@ -48,6 +48,9 @@ export default Vue.extend({
   display: flex;
   justify-content: flex-end;
   padding: 80px 0;
+  @include mq(md) {
+    padding: 30px 0;
+  }
 }
 
 .vision-container {
@@ -154,7 +157,7 @@ img {
   }
 }
 
-.sns-icon {
+.vision-sns-icon {
   width: 40px;
   height: 40px;
   display: grid;
@@ -165,7 +168,7 @@ img {
 }
 </style>
 <style lang="scss">
-.sns-icon {
+.vision-sns-icon {
   .svg-icon {
     width: 20px;
     height: 20px;

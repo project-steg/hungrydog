@@ -39,6 +39,9 @@ export default Vue.extend({
   align-items: center;
   position: relative;
   padding: 80px 0;
+  @include mq(md) {
+    padding: 60px 0 0 0;
+  }
 }
 
 .number {

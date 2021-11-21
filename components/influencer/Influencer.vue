@@ -34,6 +34,9 @@ export default Vue.extend({
   align-items: center;
   position: relative;
   padding: 80px 0;
+  @include mq(md) {
+    padding: 30px 0;
+  }
 }
 
 .num {
@@ -44,6 +47,17 @@ export default Vue.extend({
   position: absolute;
   top: 80px;
   left: -200px;
+  z-index: 1;
+  @include mq(xxl) {
+    font-size: 5rem;
+    top: 70px;
+    left: unset;
+    right: 5vw;
+  }
+  @include mq(md) {
+    top: 10px;
+    right: 0px;
+  }
 }
 .title {
   width: 100%;
@@ -51,16 +65,24 @@ export default Vue.extend({
   justify-content: flex-start;
   align-items: center;
   margin: 0 0 40px 0;
+  z-index: 2;
   h1 {
     font-size: 4rem;
     font-weight: 700;
     margin-right: 40px;
+    @include mq(md) {
+      font-size: 2.7rem;
+      margin-right: 20px;
+    }
   }
   .line {
     width: 10rem;
     height: 2px;
     border-radius: 1px;
     background-color: $black-100;
+    @include mq(md) {
+      width: 60px;
+    }
   }
 }
 
