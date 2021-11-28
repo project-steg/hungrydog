@@ -81,7 +81,7 @@ export default Vue.extend({
   background-color: $white;
   padding: 60px;
   @include mq(md) {
-    padding: 1rem;
+    padding: 2rem 1rem;
   }
 }
 

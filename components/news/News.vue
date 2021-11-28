@@ -74,9 +74,11 @@ export default Vue.extend({
   max-width: 1200px;
   width: 90%;
   display: flex;
+  margin-bottom: 80px;
   @include mq(lg) {
     flex-direction: column;
     align-items: center;
+    margin-bottom: 60px
   }
 }
 
