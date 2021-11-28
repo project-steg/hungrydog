@@ -1,6 +1,7 @@
 <template>
   <div class="index">
-    <Header />
+    <Header @changeZIndex="changeZIndex" />
+    <SnsIcons :zindex="zIndex" />
     <MainVisual />
     <Service />
     <Influencer />
@@ -15,6 +16,7 @@
 <script lang="ts">
 import Vue from 'vue'
 import Header from '@/components/common/Header.vue'
+import SnsIcons from '@/components/common/SnsIcons.vue'
 import MainVisual from '@/components/mainVisual/MainVisual.vue'
 import Service from '@/components/service/Service.vue'
 import Influencer from '@/components/influencer/Influencer.vue'
@@ -34,7 +36,24 @@ export default Vue.extend({
     News,
     Company,
     Contact,
-    Footer
+    Footer,
+    SnsIcons
+  },
+  data () {
+    return {
+      zIndex: 110 as number
+    }
+  },
+  methods: {
+    changeZIndex (n: number) {
+      if (n === 110) {
+        setTimeout(() => {
+          this.zIndex = n
+        }, 500)
+      } else {
+        this.zIndex = n
+      }
+    }
   }
 })
 </script>

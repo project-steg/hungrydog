@@ -8,7 +8,7 @@
         </div>
         <div class="container">
           <div class="contents">
-            <img src="http://placekitten.com/200/300" alt="">
+            <img src="@/assets/img/ryota-nagamatsu.jpg" alt="Ryota Nagamatsu">
             <div class="text">
               <b>唯一無二のクリエイティビティな会社を創る</b><br>
               <br>

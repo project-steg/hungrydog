@@ -3,10 +3,10 @@
     <div class="header-in-main-visual">
       <div class="circle-bg">
         <span>Follow us</span>
-        <a href="https://instagram.com/" target="_blank" rel="noopener noreferrer" class="sns-icon">
+        <a href="https://instagram.com/hungrydog_official/" target="_blank" rel="noopener noreferrer" class="sns-icon">
           <SvgIcon type="Instagram" />
         </a>
-        <a href="https://instagram.com/" target="_blank" rel="noopener noreferrer" class="sns-icon">
+        <a href="https://twitter.com/hungrydog_tokyo" target="_blank" rel="noopener noreferrer" class="sns-icon">
           <SvgIcon type="Twitter" />
         </a>
       </div>
@@ -64,6 +64,10 @@ export default Vue.extend({
   }
 }
 
+a {
+  cursor: pointer;
+}
+
 .header-in-main-visual {
   width: 100%;
   height: 90px;
@@ -85,12 +89,13 @@ export default Vue.extend({
 .circle-bg {
   width: 230px;
   height: 52px;
-  display: flex;
+  display: none;
   align-items: center;
   justify-content: center;
   border-radius: 26px;
   background-color: rgba($white, 40%);
   @include mq(xl) {
+    display: flex;
     background-color: rgba($white, 0%);
   }
   @include mq(md) {

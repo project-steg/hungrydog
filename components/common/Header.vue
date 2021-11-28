@@ -1,14 +1,14 @@
 <template>
   <div class="header">
-    <div class="logo">
+    <nuxt-link v-scroll-to="'#main-visual'" to="/" class="logo">
       Hungry Dog
-    </div>
+    </nuxt-link>
     <div class="header-r">
       <div class="clock">
         JPN {{ nowTime }}
       </div>
       <div class="header-hamburger">
-        <Hamburger />
+        <Hamburger @changeZIndex="changeZIndex" />
       </div>
     </div>
   </div>
@@ -50,6 +50,9 @@ export default Vue.extend({
       setInterval(() => {
         this.nowTime = this.$dayjs().format('HH:mm:ss')
       }, 1000)
+    },
+    changeZIndex (n: number) {
+      this.$emit('changeZIndex', n)
     }
   }
 })
@@ -69,6 +72,10 @@ export default Vue.extend({
     padding: 0 1rem;
     height: 50px;
   }
+}
+
+a {
+  cursor: pointer;
 }
 
 .logo {
