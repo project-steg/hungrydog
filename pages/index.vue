@@ -5,6 +5,7 @@
     <Service />
     <Influencer />
     <Vision />
+    <News />
   </div>
 </template>
 
@@ -15,6 +16,7 @@ import MainVisual from '@/components/mainVisual/MainVisual.vue'
 import Service from '@/components/service/Service.vue'
 import Influencer from '@/components/influencer/Influencer.vue'
 import Vision from '@/components/vision/Vision.vue'
+import News from '@/components/news/News.vue'
 
 export default Vue.extend({
   components: {
@@ -22,7 +24,8 @@ export default Vue.extend({
     Header,
     Service,
     Influencer,
-    Vision
+    Vision,
+    News
   }
 })
 </script>
