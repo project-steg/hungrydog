@@ -7,6 +7,7 @@
     <Vision />
     <News />
     <Company />
+    <Contact />
   </div>
 </template>
 
@@ -19,6 +20,7 @@ import Influencer from '@/components/influencer/Influencer.vue'
 import Vision from '@/components/vision/Vision.vue'
 import News from '@/components/news/News.vue'
 import Company from '@/components/company/Company.vue'
+import Contact from '@/components/contact/Contact.vue'
 
 export default Vue.extend({
   components: {
@@ -28,7 +30,8 @@ export default Vue.extend({
     Influencer,
     Vision,
     News,
-    Company
+    Company,
+    Contact
   }
 })
 </script>
