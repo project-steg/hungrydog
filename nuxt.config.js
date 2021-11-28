@@ -19,7 +19,6 @@ export default {
       { hid: 'description', name: 'description', content: 'Hungry Dogはインフルエンサーを軸としたSNSマーケティングに特化したWEBマーケティング会社です。' },
       { hid: 'og:site_name', property: 'og:site_name', content: '株式会社Hungry Dog 公式ホームページ' },
       { hid: 'og:type', property: 'og:type', content: 'website' },
-      // { hid: 'og:url', property: 'og:url', content: 'https://team-steg.com' },
       { hid: 'og:title', property: 'og:title', content: '株式会社Hungry Dog 公式ホームページ' },
       { hid: 'og:description', property: 'og:description', content: 'Hungry Dogはインフルエンサーを軸としたSNSマーケティングに特化したWEBマーケティング会社です。' },
       { hid: 'og:image', property: 'og:image', content: 'https://hungrydog.dev.pages/ogp.jpg' }
