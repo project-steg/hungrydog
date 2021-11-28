@@ -17,8 +17,7 @@
               SERVICE
             </nuxt-link>
           </li>
-          <!-- v-if="influencerDataList[0]" -->
-          <li @click="toggleMenu()">
+          <li v-if="influencerDataList[0]" @click="toggleMenu()">
             <nuxt-link v-scroll-to="toInfluencer" to="/">
               INFLUENCER
             </nuxt-link>
@@ -239,7 +238,7 @@ a {
   height: 150px;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-end;
   font-size: 7rem;
   font-weight: 700;
   color: $white;
