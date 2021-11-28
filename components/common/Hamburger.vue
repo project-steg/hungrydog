@@ -17,6 +17,7 @@
               SERVICE
             </nuxt-link>
           </li>
+          <!-- v-if="influencerDataList[0]" -->
           <li @click="toggleMenu()">
             <nuxt-link v-scroll-to="toInfluencer" to="/">
               INFLUENCER
@@ -44,9 +45,9 @@
           </li>
         </ul>
         <div class="times-wrapper">
-          <span>Oct. 20</span>
+          <span>{{ month }}. {{ date }}</span>
           <div class="day-of-week">
-            Wed
+            {{ dayOfWeek }}
           </div>
         </div>
       </div>
@@ -70,8 +71,22 @@ export default Vue.extend({
       toVision: '#vision' as String,
       toNews: '#news' as String,
       toCompany: '#company' as String,
-      toContact: '#contact' as String
+      toContact: '#contact' as String,
+      influencerDataList: [] as object[],
+      month: '' as string,
+      date: '' as string,
+      dayOfWeek: '' as string
     }
+  },
+  async created () {
+    const res = await this.$axios.get(`${process.env.BASE_URL}influencer?limit=99`, {
+      headers: { 'X-MICROCMS-API-KEY': process.env.API_KEY }
+    })
+    this.influencerDataList = res.data.contents
+    this.$dayjs.locale('en')
+    this.month = this.$dayjs().format('MMM')
+    this.date = this.$dayjs().format('DD')
+    this.dayOfWeek = this.$dayjs().format('ddd')
   },
   methods: {
     toggleMenu () {
@@ -120,6 +135,10 @@ a {
   right: 0px;
   top: 0px;
   transition: all .6s;/*0.6秒かけてアニメーション*/
+  @include mq(md) {
+    right: -20px;
+    top: -20px;
+  }
 }
 
 .circle-bg.circleactive{
@@ -194,6 +213,9 @@ a {
     font-size: 3rem;
     line-height: 80px;
   }
+  @include mq(md) {
+    line-height: 60px;
+  }
 }
 
 .times-wrapper {
@@ -217,7 +239,7 @@ a {
   height: 150px;
   display: flex;
   align-items: center;
-  justify-content: flex-end;
+  justify-content: center;
   font-size: 7rem;
   font-weight: 700;
   color: $white;
