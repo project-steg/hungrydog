@@ -48,7 +48,8 @@ export default {
   modules: [
     '@nuxtjs/style-resources',
     '@nuxtjs/dayjs',
-    'vue-scrollto/nuxt'
+    'vue-scrollto/nuxt',
+    '@nuxtjs/axios'
   ],
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
@@ -63,5 +64,9 @@ export default {
       'utc', // import 'dayjs/plugin/utc'
       'timezone' // import 'dayjs/plugin/timezone'
     ] // Your Day.js plugin
+  },
+  env: {
+    API_KEY: process.env.API_KEY,
+    BASE_URL: process.env.BASE_URL
   }
 }

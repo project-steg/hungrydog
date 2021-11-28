@@ -1271,13 +1271,18 @@
         </g>
       </g>
     </svg>
+    <svg v-if="type === 'YouTube'" xmlns="http://www.w3.org/2000/svg" width="25" height="17.569" viewBox="0 0 25 17.569">
+      <g id="YOUTUBE_icon-icons.com_65487" transform="translate(-3.09 -91.895)">
+        <path id="パス_1" data-name="パス 1" d="M15.749,109.463c-2.809-.089-5.481-.157-8.152-.261a9.253,9.253,0,0,1-1.722-.246,2.856,2.856,0,0,1-2.155-1.919,10.209,10.209,0,0,1-.487-2.573A49.656,49.656,0,0,1,3.145,98.3a15.4,15.4,0,0,1,.389-3.459,3.562,3.562,0,0,1,.959-1.82,3.188,3.188,0,0,1,2.017-.861c2.106-.1,4.206-.231,6.312-.251,2.834-.03,5.672.01,8.506.064A33.977,33.977,0,0,1,25,92.215a2.86,2.86,0,0,1,2.386,1.85,8.644,8.644,0,0,1,.541,2.588,49.283,49.283,0,0,1,.089,6.656,14.319,14.319,0,0,1-.428,3.355,3.113,3.113,0,0,1-2.425,2.376,8.935,8.935,0,0,1-1.535.167C20.955,109.3,18.283,109.385,15.749,109.463Zm-2.721-5.594c2.243-1.161,4.462-2.312,6.725-3.488-2.258-1.181-4.477-2.337-6.725-3.513C13.029,99.216,13.029,101.523,13.029,103.87Z" transform="translate(0 0)" fill="#fff" />
+      </g>
+    </svg>
   </div>
 </template>
 
 <script lang="ts">
 import Vue from 'vue'
 
-export type IconName = 'Instagram' | 'Twitter' | 'Marketing' | 'Affiliate' | 'Creative' | 'Livers' | 'Commerce' | 'Media' | 'Posting' | 'SNSManagement'
+export type IconName = 'Instagram' | 'Twitter' | 'Marketing' | 'Affiliate' | 'Creative' | 'Livers' | 'Commerce' | 'Media' | 'Posting' | 'SNSManagement' | 'YouTube'
 
 export default Vue.extend({
   props: {

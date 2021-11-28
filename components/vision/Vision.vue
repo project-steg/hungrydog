@@ -1,10 +1,10 @@
 <template>
-  <div class="vision">
+  <div id="vision">
     <div class="vision-container">
       <h1>VISION</h1>
       <div class="black-background">
         <div class="num">
-          04
+          03
         </div>
         <div class="container">
           <div class="contents">
@@ -43,7 +43,7 @@ export default Vue.extend({
 })
 </script>
 <style scoped lang="scss">
-.vision {
+#vision {
   width: 100%;
   display: flex;
   justify-content: flex-end;

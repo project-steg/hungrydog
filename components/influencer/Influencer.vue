@@ -1,5 +1,5 @@
 <template>
-  <div class="influencer">
+  <div v-if="influencerDataList[0]" id="influencer">
     <div class="num">
       03
     </div>
@@ -8,9 +8,9 @@
       <div class="line" />
     </div>
     <div class="contents">
-      <InfluencerItem />
-      <InfluencerItem />
-      <InfluencerItem />
+      <div v-for="elem in influencerDataList" :key="elem.id">
+        <InfluencerItem :influencer="elem" />
+      </div>
     </div>
   </div>
 </template>
@@ -22,11 +22,22 @@ import InfluencerItem from '@/components/influencer/InfluencerItem.vue'
 export default Vue.extend({
   components: {
     InfluencerItem
+  },
+  data () {
+    return {
+      influencerDataList: [] as object[]
+    }
+  },
+  async created () {
+    const res = await this.$axios.get(`${process.env.BASE_URL}influencer?limit=99`, {
+      headers: { 'X-MICROCMS-API-KEY': process.env.API_KEY }
+    })
+    this.influencerDataList = res.data.contents
   }
 })
 </script>
 <style scoped lang="scss">
-.influencer {
+#influencer {
   max-width: 1020px;
   width: 90%;
   display: flex;

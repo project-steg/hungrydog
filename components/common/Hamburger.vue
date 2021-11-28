@@ -8,32 +8,32 @@
         <!--ナビの数が増えた場合縦スクロールするためのdiv※不要なら削除-->
         <ul>
           <li @click="toggleMenu()">
-            <nuxt-link v-scroll-to="toNews" to="/">
+            <nuxt-link v-scroll-to="toTop" to="/">
               ABOUT
             </nuxt-link>
           </li>
           <li @click="toggleMenu()">
-            <nuxt-link v-scroll-to="toAbout" to="/">
+            <nuxt-link v-scroll-to="toService" to="/">
               SERVICE
             </nuxt-link>
           </li>
           <li @click="toggleMenu()">
-            <nuxt-link v-scroll-to="toWorks" to="/">
+            <nuxt-link v-scroll-to="toInfluencer" to="/">
               INFLUENCER
             </nuxt-link>
           </li>
           <li @click="toggleMenu()">
-            <nuxt-link v-scroll-to="toProfile" to="/">
+            <nuxt-link v-scroll-to="toVision" to="/">
               VISION
             </nuxt-link>
           </li>
           <li @click="toggleMenu()">
-            <nuxt-link v-scroll-to="toMembers" to="/">
+            <nuxt-link v-scroll-to="toNews" to="/">
               NEWS
             </nuxt-link>
           </li>
           <li @click="toggleMenu()">
-            <nuxt-link v-scroll-to="toContact" to="/">
+            <nuxt-link v-scroll-to="toCompany" to="/">
               COMPANY
             </nuxt-link>
           </li>
@@ -65,11 +65,11 @@ export default Vue.extend({
       panelactive: false as Boolean,
       circleactive: false as Boolean,
       toTop: '#main-visual' as String,
-      toNews: '#news-container' as String,
-      toAbout: '#about' as String,
-      toWorks: '#works-container' as String,
-      toProfile: '#company-profile' as String,
-      toMembers: '#members' as String,
+      toService: '#service' as String,
+      toInfluencer: '#influencer' as String,
+      toVision: '#vision' as String,
+      toNews: '#news' as String,
+      toCompany: '#company' as String,
       toContact: '#contact' as String
     }
   },
@@ -90,6 +90,9 @@ export default Vue.extend({
 </script>
 
 <style scoped lang="scss">
+a {
+  cursor: pointer;
+}
 /*========= ナビゲーションのためのCSS ===============*/
 
 /*アクティブになったエリア*/

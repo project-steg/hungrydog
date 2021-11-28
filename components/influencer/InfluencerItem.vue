@@ -2,31 +2,30 @@
   <div class="influencer-item">
     <div class="img-wrapper">
       <div class="main-sns">
-        <SvgIcon type="Instagram" />
-        <span>Instagram</span>
+        <SvgIcon :type="influencer.mainSns[0]" />
+        <span>{{ influencer.mainSns[0] }}</span>
       </div>
       <img src="http://placekitten.com/200/300" alt="">
       <div class="eng-name">
-        HONOKA
+        {{ influencer.engName }}
       </div>
     </div>
     <div class="name-wrapper">
       <div class="name">
-        ほのか
+        {{ influencer.name }}
       </div>
       <div class="sns-icons">
-        <a href="https://instagram.com/" target="_blank" rel="noopener noreferrer" class="sns-icon">
+        <a v-if="influencer.instagramUrl" :href="influencer.instagramUrl" target="_blank" rel="noopener noreferrer" class="sns-icon">
           <SvgIcon type="Instagram" />
         </a>
-        <a href="https://twitter.com/" target="_blank" rel="noopener noreferrer" class="sns-icon">
+        <a v-if="influencer.twitterUrl" :href="influencer.twitterUrl" target="_blank" rel="noopener noreferrer" class="sns-icon">
           <SvgIcon type="Twitter" />
         </a>
       </div>
     </div>
     <div class="line" />
     <div class="intro-text">
-      ファッション系インフルエンサー。
-      双子の妹と共に弊社D2C事業部でアパレルブランドを2020年12月リリース。
+      {{ influencer.introText }}
     </div>
   </div>
 </template>
@@ -37,6 +36,12 @@ import SvgIcon from '@/components/common/SvgIcon.vue'
 export default Vue.extend({
   components: {
     SvgIcon
+  },
+  props: {
+    influencer: {
+      type: Object,
+      default: () => {}
+    }
   }
 })
 </script>
@@ -69,6 +74,8 @@ img {
   position: absolute;
   padding: 0 15px;
   span {
+    width: 70%;
+    text-align: center;
     font-weight: 500;
     color: $white;
   }

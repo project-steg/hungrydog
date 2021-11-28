@@ -1,5 +1,5 @@
 <template>
-  <div class="company">
+  <div id="company">
     <div class="container">
       <div class="title-wrapper">
         <h2>COMPANY</h2>
@@ -34,7 +34,7 @@
           住所
         </div>
         <div class="info">
-          東京都渋谷区恵比寿2-37-8sグランデュオ広尾602
+          東京都渋谷区恵比寿2-37-8グランデュオ広尾602
         </div>
       </div>
       <div class="item">
@@ -57,7 +57,7 @@ export default Vue.extend({
 })
 </script>
 <style scoped lang="scss">
-.company {
+#company {
   width: 100%;
   display: flex;
   justify-content: center;

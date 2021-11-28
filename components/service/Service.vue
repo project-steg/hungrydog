@@ -1,5 +1,5 @@
 <template>
-  <div class="service">
+  <div id="service">
     <div class="number">
       02
     </div>
@@ -32,7 +32,7 @@ export default Vue.extend({
 </script>
 
 <style scoped lang="scss">
-.service {
+#service {
   width: 100%;
   display: flex;
   flex-direction: column;

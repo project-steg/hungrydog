@@ -1,5 +1,5 @@
 <template>
-  <div class="main-visual">
+  <div id="main-visual">
     <div class="header-in-main-visual">
       <div class="circle-bg">
         <span>Follow us</span>
@@ -43,7 +43,7 @@ export default Vue.extend({
 })
 </script>
 <style scoped lang="scss">
-.main-visual {
+#main-visual {
   width: 100%;
   min-height: 100vh;
   display: flex;

@@ -1,5 +1,5 @@
 <template>
-  <div class="contact">
+  <div id="contact">
     <div class="title">
       <h2>CONTACT</h2>
     </div>
@@ -7,21 +7,21 @@
       <div class="label">
         氏名
       </div>
-      <input type="text">
+      <input v-model="name" type="text">
     </div>
     <div class="input-wrapper">
       <div class="label">
         メールアドレス
       </div>
-      <input type="text">
+      <input v-model="mail" type="text">
     </div>
     <div class="textarea-wrapper">
       <div class="label">
         お問い合わせ内容
       </div>
-      <textarea />
+      <textarea v-model="content" />
     </div>
-    <button>
+    <button @click="submit()">
       送信
     </button>
   </div>
@@ -31,10 +31,43 @@
 import Vue from 'vue'
 
 export default Vue.extend({
+  data () {
+    return {
+      name: '' as string,
+      mail: '' as string,
+      content: '' as string,
+      isError: false as boolean
+    }
+  },
+  methods: {
+    async submit () {
+      if (this.name && this.mail && this.content) {
+        await this.$axios.$post(`${process.env.BASE_URL}contact`, {
+          name: this.name,
+          mail: this.mail,
+          content: this.content
+        }, {
+          headers: {
+            'Content-Type': 'application/json',
+            'X-MICROCMS-API-KEY': process.env.API_KEY
+          }
+        }).then(() => {
+          alert('送信しました')
+          this.name = ''
+          this.mail = ''
+          this.content = ''
+        }).catch(() => {
+          alert('エラーが発生しました')
+        })
+      } else {
+        alert('値を入力してください')
+      }
+    }
+  }
 })
 </script>
 <style scoped lang="scss">
-.contact {
+#contact {
   max-width: 1200px;
   width: 90%;
   margin-top: 80px;

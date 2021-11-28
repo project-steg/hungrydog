@@ -1,61 +1,21 @@
 <template>
-  <div class="news">
+  <div id="news">
     <div class="title-wrapper">
       <div class="title">
         <h2>NEWS</h2>
         <div class="line" />
       </div>
       <div class="section-num">
-        05
+        04
       </div>
     </div>
     <div class="container">
-      <div class="news-item">
+      <div v-for="elem in newsDataList" :key="elem.id" class="news-item">
         <div class="date">
-          2021.10.20
+          {{ elem.date }}
         </div>
         <div class="news-text">
-          あああああああああああああああ
-        </div>
-      </div>
-      <div class="news-item">
-        <div class="date">
-          2021.10.20
-        </div>
-        <div class="news-text">
-          あああああああああああああああ
-        </div>
-      </div>
-      <div class="news-item">
-        <div class="date">
-          2021.10.20
-        </div>
-        <div class="news-text">
-          あああああああああああああああ
-        </div>
-      </div>
-      <div class="news-item">
-        <div class="date">
-          2021.10.20
-        </div>
-        <div class="news-text">
-          あああああああああああああああ
-        </div>
-      </div>
-      <div class="news-item">
-        <div class="date">
-          2021.10.20
-        </div>
-        <div class="news-text">
-          あああああああああああああああ
-        </div>
-      </div>
-      <div class="news-item">
-        <div class="date">
-          2021.10.20
-        </div>
-        <div class="news-text">
-          あああああああああああああああ
+          {{ elem.content }}
         </div>
       </div>
     </div>
@@ -66,11 +26,21 @@
 import Vue from 'vue'
 
 export default Vue.extend({
-  components: {}
+  data () {
+    return {
+      newsDataList: [] as object[]
+    }
+  },
+  async created () {
+    const res = await this.$axios.get(`${process.env.BASE_URL}news?limit=99`, {
+      headers: { 'X-MICROCMS-API-KEY': process.env.API_KEY }
+    })
+    this.newsDataList = res.data.contents
+  }
 })
 </script>
 <style scoped lang="scss">
-.news {
+#news {
   max-width: 1200px;
   width: 90%;
   display: flex;
