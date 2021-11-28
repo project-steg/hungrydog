@@ -22,9 +22,9 @@
           </div>
           <div class="ceo-info">
             <span>Ryota Nagamatsu</span>
-            <div class="vision-sns-icon">
+            <a href="https://instagram.com/ryota_2k21/" target="_blank" rel="noopener noreferrer" class="vision-sns-icon">
               <SvgIcon type="Instagram" />
-            </div>
+            </a>
           </div>
         </div>
       </div>
@@ -165,6 +165,7 @@ img {
   background-color: $white;
   border-radius: 20px;
   margin: 0 20px;
+  cursor: pointer;
 }
 </style>
 <style lang="scss">

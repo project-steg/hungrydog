@@ -3,12 +3,12 @@
     <div class="header-in-main-visual">
       <div class="circle-bg">
         <span>Follow us</span>
-        <div class="sns-icon">
+        <a href="https://instagram.com/" target="_blank" rel="noopener noreferrer" class="sns-icon">
           <SvgIcon type="Instagram" />
-        </div>
-        <div class="sns-icon">
+        </a>
+        <a href="https://instagram.com/" target="_blank" rel="noopener noreferrer" class="sns-icon">
           <SvgIcon type="Twitter" />
-        </div>
+        </a>
       </div>
     </div>
     <div class="contents">
@@ -111,6 +111,7 @@ export default Vue.extend({
   border-radius: 50%;
   background-color: $black-100;
   margin-left: 1rem;
+  cursor: pointer;
   .svg-icon {
     fill: $white;
   }

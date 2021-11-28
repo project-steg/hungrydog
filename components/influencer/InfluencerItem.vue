@@ -15,12 +15,12 @@
         ほのか
       </div>
       <div class="sns-icons">
-        <div class="sns-icon">
+        <a href="https://instagram.com/" target="_blank" rel="noopener noreferrer" class="sns-icon">
           <SvgIcon type="Instagram" />
-        </div>
-        <div class="sns-icon">
+        </a>
+        <a href="https://twitter.com/" target="_blank" rel="noopener noreferrer" class="sns-icon">
           <SvgIcon type="Twitter" />
-        </div>
+        </a>
       </div>
     </div>
     <div class="line" />
@@ -119,6 +119,7 @@ img {
   border-radius: 15px;
   background-color: $black-100;
   margin-left: 0.5rem;
+  cursor: pointer;
   .svg-icon {
     width: 1rem;
     height: 1rem;
