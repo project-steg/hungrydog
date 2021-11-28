@@ -93,10 +93,12 @@ export default Vue.extend({
         this.active = true
         this.panelactive = true
         this.circleactive = true
+        this.$emit('changeZIndex', 0)
       } else {
         this.active = false
         this.panelactive = false
         this.circleactive = false
+        this.$emit('changeZIndex', 110)
       }
     }
   }
