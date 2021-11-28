@@ -1,0 +1,32 @@
+$black-100: #17171b;
+$black-200: #202026;
+$black-600: #d2d2d2;
+$black-700: #f3f3f3;
+$white: #ffffff;
+$breakpoints: (
+  "sm": "screen and (max-width: 400px)",
+  "md": "screen and (max-width: 768px)",
+  "lg": "screen and (max-width: 1000px)",
+  "xl": "screen and (max-width: 1200px)",
+  "xxl": "screen and (max-width: 1600px)",
+) !default;
+@mixin mq($breakpoint: md) {
+  @media #{map-get($breakpoints, $breakpoint)} {
+    @content;
+  }
+}
+html,
+div,
+p,
+a,
+span,
+h1,
+h2,
+h3,
+label {
+  font-size: 16px;
+  color: $black-100;
+  @include mq(lg) {
+    font-size: 14px;
+  }
+}
