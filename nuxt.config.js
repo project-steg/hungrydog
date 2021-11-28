@@ -21,7 +21,7 @@ export default {
       { hid: 'og:type', property: 'og:type', content: 'website' },
       { hid: 'og:title', property: 'og:title', content: '株式会社Hungry Dog 公式ホームページ' },
       { hid: 'og:description', property: 'og:description', content: 'Hungry Dogはインフルエンサーを軸としたSNSマーケティングに特化したWEBマーケティング会社です。' },
-      { hid: 'og:image', property: 'og:image', content: 'https://hungrydog.dev.pages/ogp.jpg' }
+      { hid: 'og:image', property: 'og:image', content: 'https://hungrydog.pages.dev/ogp.jpg' }
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
