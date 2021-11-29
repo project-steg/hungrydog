@@ -84,6 +84,9 @@ export default Vue.extend({
 .contents {
   width: 100%;
   min-height: 80px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   padding: 0 46px 25px 76px;
   font-weight: 500;
 }

@@ -23,7 +23,10 @@
       <template #contents>
         商品や店舗等と相性の良いインフルエンサーと一丸となり、PRを行うサービスです。
         昨今、インフルエンサーのPRが実はターゲットへリーチしていないといった経験や悩みがあるのではないでしょうか？<br>
-        [図挿入]<br>
+        <div class="img-wrapper">
+          <img src="@/assets/img/instagram-demo.jpg" alt="demo画像">
+          <img src="@/assets/img/graph.jpg" alt="グラフ">
+        </div>
         弊社では、ただフォロワーの数で判断する方法ではなく、過去実績やデータに基づき
         お客様に対して、正しいインフルエンサーアサインさせて頂きます。
       </template>
@@ -196,5 +199,27 @@ export default Vue.extend({
 
 .text {
   font-size: 1.2rem;
+}
+
+.img-wrapper {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin: 1rem 0;
+  @include mq(md) {
+    flex-direction: column;
+    img + img {
+      margin-top: 1rem;
+    }
+  }
+  img {
+    width: 40%;
+    height: auto;
+    @include mq(md) {
+      max-width: 400px;
+      width: 100%;
+    }
+  }
 }
 </style>
