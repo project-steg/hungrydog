@@ -225,6 +225,9 @@ a {
   flex-direction: column;
   align-items: flex-end;
   justify-content: flex-end;
+  @include mq(xl) {
+    height: unset;
+  }
   span {
     font-size: 7rem;
     font-weight: 700;
