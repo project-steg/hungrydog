@@ -16,7 +16,7 @@
         01
       </div>
       <h1>Hungry Dog Inc.</h1>
-      <span>is indomitable spirit team.<br>
+      <span>is a team with an indomitable spirit.<br>
         We will do our best<br>
         to be your greatest partner.
         <div class="num-s">
