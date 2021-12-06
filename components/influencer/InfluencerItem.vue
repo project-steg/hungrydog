@@ -5,7 +5,7 @@
         <SvgIcon :type="influencer.mainSns[0]" />
         <span>{{ influencer.mainSns[0] }}</span>
       </div>
-      <img src="http://placekitten.com/200/300" alt="">
+      <img :src="influencer.img.url" alt="">
       <div class="eng-name">
         {{ influencer.engName }}
       </div>
@@ -18,8 +18,11 @@
         <a v-if="influencer.instagramUrl" :href="influencer.instagramUrl" target="_blank" rel="noopener noreferrer" class="sns-icon">
           <SvgIcon type="Instagram" />
         </a>
-        <a v-if="influencer.twitterUrl" :href="influencer.twitterUrl" target="_blank" rel="noopener noreferrer" class="sns-icon">
+        <a v-else-if="influencer.twitterUrl" :href="influencer.twitterUrl" target="_blank" rel="noopener noreferrer" class="sns-icon">
           <SvgIcon type="Twitter" />
+        </a>
+        <a v-else-if="influencer.youtubeUrl" :href="influencer.twitterUrl" target="_blank" rel="noopener noreferrer" class="sns-icon">
+          <SvgIcon type="YouTube" />
         </a>
       </div>
     </div>
