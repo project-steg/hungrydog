@@ -3,7 +3,7 @@
     <div class="header-in-main-visual">
       <div class="circle-bg">
         <span>Follow us</span>
-        <a href="https://instagram.com/hungrydog_official/" target="_blank" rel="noopener noreferrer" class="sns-icon">
+        <a href="https://www.instagram.com/hungrydog.tokyo/" target="_blank" rel="noopener noreferrer" class="sns-icon">
           <SvgIcon type="Instagram" />
         </a>
         <a href="https://twitter.com/hungrydog_tokyo" target="_blank" rel="noopener noreferrer" class="sns-icon">
