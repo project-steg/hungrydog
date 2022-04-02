@@ -1,6 +1,6 @@
 <template>
   <div class="footer">
-    &copy; 2021 Hungry Dog Inc.
+    &copy; 2022 Hungry Dog Inc.
   </div>
 </template>
 
