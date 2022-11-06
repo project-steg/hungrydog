@@ -26,7 +26,7 @@
           資本金
         </div>
         <div class="info">
-          ¥600,000
+          ¥4000,000
         </div>
       </div>
       <div class="item">
